@@ -1,0 +1,25 @@
+_base_:
+  - ../_base_/runtime/default_dataloader.yaml
+
+real_set:
+  name: git10m_eval_5k
+  image_dir: dataset/Git-10M/eval_5k/images
+  preprocess:
+    - {type: ToTensor, keys: [pred]}
+  batch_size: 64
+  num_workers: 8
+  auto_resume: true
+
+metrics:
+  - type: FID
+    feature: 2048
+    normalize: true
+  - type: CMMD
+    model_path: weights/evaluation/clip-vit-large-patch14-336
+    sigma: 10.0
+    scale: 1000.0
+
+eval:
+  label_source: metadata
+  label_metadata_path: dataset/Git-10M/eval_5k/metadata.jsonl
+  label_key: label

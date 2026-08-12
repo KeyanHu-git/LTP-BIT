@@ -1,0 +1,17 @@
+data:
+  name: SEN1_2
+  default_path: dataset/SEN1_2
+
+dataset:
+  type: Dataset_RAEPairedI2I
+  dataroot: dataset/SEN1_2
+  pipeline_dir: raev2/stage3/sen1_2
+  split: test
+  source_dir: sar
+  target_dir: opt
+  is_train: false
+  fixed_label: 0
+
+test_pipeline:
+  - {type: CenterCrop, keys: [img, img_ref], size: 256}
+  - {type: ToTensor, keys: [img, img_ref]}

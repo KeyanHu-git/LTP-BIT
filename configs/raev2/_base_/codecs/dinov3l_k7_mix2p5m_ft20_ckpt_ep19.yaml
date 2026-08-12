@@ -1,0 +1,7 @@
+# DINOv3-L K7 codec with the mixed-2.5M ft20 run's epoch-19 EMA decoder.
+_base_:
+  - ./dinov3l_k7_imagenet.yaml
+
+stage_1:
+  params:
+    pretrained_decoder_path: weights/stage1/ltp_bit_codec_ep19/decoder_ema.pt

@@ -1,0 +1,17 @@
+# Phase 2 of the released IG-XL 100-epoch prior recipe: 85 epochs after phase 1.
+_base_:
+  - igxl_1m_ep15.yaml
+
+stage_2:
+  ckpt: weights/stage2/igxl_git1m_ep15.pt
+
+training:
+  epochs: 85
+  grad_accum_steps: 4
+  scheduler:
+    type: linear
+    warmup_epochs: 28
+    decay_end_epoch: 57
+    base_lr: 2.0e-4
+    final_lr: 2.0e-5
+    warmup_from_zero: false

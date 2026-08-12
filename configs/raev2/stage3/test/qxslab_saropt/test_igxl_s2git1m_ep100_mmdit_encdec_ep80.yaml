@@ -1,0 +1,21 @@
+_base_:
+  - ../../train/qxslab_saropt/igxl_s2git1m_ep100_mmdit_encdec_ep80.yaml
+  - ../../../../datasets/raev2/stage3/qxslab_saropt/test.yaml
+
+dataset:
+  fixed_label: 9
+
+eval:
+  num_samples: 4000
+
+inference:
+  ckpt: weights/stage3/qxslab_saropt/igxl_ltp_bit_ep80.pt
+  num_samples: 4000
+  per_proc_batch_size: 4
+  gen_batch_size: 16
+  sample_dir: experiments/raev2/stage3/qxslab_saropt
+  save_folder: igxl_s2git1m_ep100_mmdit_encdec_ep80/inference/full4000
+  seed: 42
+  precision: bf16
+  prefer_ema: true
+  clean_output: false

@@ -1,0 +1,69 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Data, weights, and generated artifacts.
+/experiments/
+/_archive/
+/baselines/
+/dataset/
+/data/
+/outputs/
+/Reference/
+/Result_File/
+/swanlog/
+/Weight/
+/Evaluation/cached_features/
+
+# Public tool surface: only the RAEv2 training/evaluation entry points.
+/tools/*
+!/tools/raev2/
+/tools/raev2/*
+!/tools/raev2/train_stage1.py
+!/tools/raev2/train_stage2.py
+!/tools/raev2/train_stage3.py
+!/tools/raev2/test_stage1.py
+!/tools/raev2/test_stage2.py
+!/tools/raev2/test_stage3.py
+!/tools/raev2/export_stage1_decoder.py
+
+# Common generated model/data files.
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.npz
+*.npy
+
+*.arrow
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+*.log
+
+# Images and rendered figures stay outside the public repository. Curated
+# paper/project assets may be allow-listed under assets/ when the README lands.
+/images/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.webp
+*.svg
+*.ico
+*.avif
+!/assets/
+!/assets/**
+
+# Local runtime clutter.
+.DS_Store
+.nfs*
+*.tmp
+*.bak
+.cache/md2pdf/

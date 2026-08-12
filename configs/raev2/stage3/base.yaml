@@ -1,0 +1,87 @@
+transport:
+  prediction: x
+  time_dist_type: logit-normal_0_1
+  t_eps: 0.05
+
+sampler:
+  num_steps: 50
+
+guidance:
+  cfg:
+    scale: 1.0
+    t_min: 0.0
+    t_max: 1.0
+
+stage3:
+  control:
+    type: none
+    target: null
+    params: {}
+  data_mix:
+    paired_ratio: 1.0
+    prior_ratio: 0.0
+    source_dropout_ratio: 0.0
+  loss:
+    base_model_coeff: 0.0
+  freeze:
+    base_model: false
+    trainable: []
+    frozen: []
+  checkpoint:
+    strict_init: true
+    allowed_missing_prefixes: []
+
+lora:
+  rank: 0
+  alpha: 0
+
+training:
+  epochs: 500
+  global_batch_size: 128
+  grad_accum_steps: 1
+  ema_decay: 0.999
+  num_workers: 4
+  log_interval: 25
+  checkpoint_interval: 10
+  checkpoint_policy:
+    interval_epochs: 10
+    save_numbered: true
+  clip_grad: 0.3
+  global_seed: 42
+  precision: bf16
+  compile: false
+  init_ckpt: null
+  allow_cold_start: false
+  optimizer:
+    type: adamw
+    lr: 2.0e-5
+    betas: [0.9, 0.95]
+    weight_decay: 0.0
+  scheduler:
+    type: linear
+    warmup_epochs: 2
+    decay_end_epoch: 500
+    base_lr: 2.0e-5
+    final_lr: 3.0e-6
+    warmup_from_zero: true
+
+eval:
+  enabled: false
+  epoch_interval: 10
+  num_samples: 256
+  gen_batch_size: 8
+  split: test
+  save_dir: sample
+  preview_dir: sample_preview
+  preview_max_images: 16
+  fail_on_error: true
+
+inference:
+  use_lora: true
+
+misc:
+  latent_size: [768, 16, 16]
+  num_classes: 1000
+  null_label: 1000
+  time_dist_shift_dim: 196608
+  time_dist_shift_base: 4096

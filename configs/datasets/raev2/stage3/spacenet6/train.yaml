@@ -1,0 +1,18 @@
+data:
+  name: SpaceNet6_256
+  default_path: dataset/SpaceNet6_256_clean
+
+dataset:
+  type: Dataset_RAEPairedI2I
+  dataroot: dataset/SpaceNet6_256_clean
+  pipeline_dir: raev2/stage3/spacenet6
+  split: train
+  source_dir: sar
+  target_dir: opt
+  is_train: true
+  fixed_label: 0
+
+train_pipeline:
+  - {type: CenterCrop, keys: [img, img_ref], size: 256}
+  - {type: RandomFlip, keys: [img, img_ref], prob: 0.5, direction: horizontal}
+  - {type: ToTensor, keys: [img, img_ref]}

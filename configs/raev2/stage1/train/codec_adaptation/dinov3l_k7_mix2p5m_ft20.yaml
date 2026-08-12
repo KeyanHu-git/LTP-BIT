@@ -1,0 +1,50 @@
+# Canonical Stage1 codec adaptation on the 2.5M mixed corpus.
+_base_:
+  - ../../base.yaml
+  - ../../../../raev2/_base_/codecs/dinov3l_k7_imagenet.yaml
+  - ../../../../datasets/raev2/stage1/mixed_2p5m/train.yaml
+  - ../../../../eval/stage1/in_training/git10m_imagenet_val.yaml
+
+stage_1:
+  params:
+    noise_tau: 0.8                       # override codec default 0.0
+
+training:
+  epochs: 20
+  global_batch_size: 512
+  grad_accum_steps: 4
+  discriminator_only_epochs: 1
+  checkpoint_interval: 5
+  checkpoint_policy:
+    save_numbered: true
+    save_last_every_epoch: true
+  noise_tau_schedule:
+    enabled: true
+    start_epoch: 0.0
+    end_epoch: 20.0
+    start_value: 0.8
+    end_value: 0.1
+  optimizer:
+    lr: 1.0e-4
+  scheduler:
+    warmup_epochs: 0.5
+    decay_end_epoch: 20.0
+    base_lr: 1.0e-4
+    final_lr: 1.0e-5
+
+gan:
+  optimizer:
+    lr: 2.0e-5
+  scheduler:
+    warmup_epochs: 0.0
+    decay_end_epoch: 20.0
+    base_lr: 2.0e-5
+    final_lr: 2.0e-6
+    warmup_from_zero: false
+  loss:
+    disc_start: 1
+    disc_upd_start: 0
+
+eval:
+  eval_at_start: true
+  eval_interval: 2441

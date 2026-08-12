@@ -1,0 +1,6 @@
+_base_:
+  - ../train/git10m/igxl_1m_ep85_from_ep15.yaml
+  - _base_/git10m_eval_n5000.yaml
+
+stage_2:
+  ckpt: weights/stage2/igxl_git1m_ep100.pt

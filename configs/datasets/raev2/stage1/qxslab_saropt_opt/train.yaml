@@ -1,0 +1,3 @@
+train_pipeline:
+  - {type: CenterCropArr, keys: [img], size: 256}
+  - {type: ToTensor, keys: [img]}

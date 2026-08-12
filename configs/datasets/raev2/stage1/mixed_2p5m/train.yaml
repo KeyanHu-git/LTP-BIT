@@ -1,0 +1,16 @@
+data:
+  name: mixed_2p5m
+  default_path: dataset/Stage1_250W_Git1M_ImageNet500K_GitRand1M_256
+
+dataset:
+  type: Dataset_MetadataLabelCC
+  dataroot: dataset/Stage1_250W_Git1M_ImageNet500K_GitRand1M_256
+  metadata_path: dataset/Stage1_250W_Git1M_ImageNet500K_GitRand1M_256/metadata.jsonl
+  pipeline_dir: raev2/stage1/mixed_2p5m
+  is_train: true
+  filter_split: false
+
+train_pipeline:
+  - {type: CenterCropArr, keys: [img], size: 256}
+  - {type: RandomFlip, keys: [img], prob: 0.5, direction: horizontal}
+  - {type: ToTensor, keys: [img]}

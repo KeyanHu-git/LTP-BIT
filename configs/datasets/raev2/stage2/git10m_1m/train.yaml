@@ -1,0 +1,18 @@
+data:
+  name: git10m_1m
+  default_path: dataset/Git-10M_resolution_256_1M
+
+dataset:
+  type: Dataset_MetadataLabelCC
+  condition_type: label
+  dataroot: dataset/Git-10M_resolution_256_1M
+  metadata_path: dataset/Git-10M_resolution_256_1M/metadata.jsonl
+  pipeline_dir: raev2/stage2/git10m_1m
+  is_train: true
+  label_key: label
+  filter_split: false
+
+train_pipeline:
+  - {type: CenterCropArr, keys: [img], size: 256}
+  - {type: RandomFlip, keys: [img], prob: 0.5, direction: horizontal}
+  - {type: ToTensor, keys: [img]}

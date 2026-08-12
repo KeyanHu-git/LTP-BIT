@@ -1,0 +1,21 @@
+_base_:
+  - ../_base_/igxl_s2git1m_ep100_mmdit_encdec.yaml
+  - ../../../../datasets/raev2/stage3/sen1_2/train.yaml
+  - ../../../../eval/train/stage3_sen1_2.yaml
+
+stage3:
+  loss:
+    time_sampling:
+      pure_noise_hold_frac: 0.1
+
+dataset:
+  fixed_label: 9
+
+training:
+  epochs: 100
+  scheduler:
+    decay_end_epoch: 100
+
+inference:
+  sample_dir: experiments/raev2/stage3/sen1_2
+  save_folder: igxl_s2git1m_ep100_mmdit_encdec_ep100

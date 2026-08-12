@@ -1,0 +1,11 @@
+_base_:
+  - ../../../../_base_/codecs/dinov3l_k7_mix2p5m_ft20_ckpt_ep19.yaml
+  - ../../../../../datasets/raev2/stage1/qxslab_saropt_opt/recon.yaml
+
+inference:
+  num_samples: 4000
+  per_proc_batch_size: 16
+  sample_dir: experiments/raev2/stage1/qxslab_saropt_opt
+  save_folder: dinov3l_k7_mix2p5m_ft20_ckpt_ep19/inference/recon_opt4k
+  precision: bf16
+  clean_output: false

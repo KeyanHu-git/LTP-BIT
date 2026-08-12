@@ -1,0 +1,21 @@
+_base_:
+  - ../../train/spacenet6/igxl_s2git1m_ep100_mmdit_encdec_ep80.yaml
+  - ../../../../datasets/raev2/stage3/spacenet6/test.yaml
+
+dataset:
+  fixed_label: 9
+
+eval:
+  num_samples: 5048
+
+inference:
+  ckpt: weights/stage3/spacenet6/igxl_ltp_bit_ep80.pt
+  num_samples: 5048
+  per_proc_batch_size: 4
+  gen_batch_size: 16
+  sample_dir: experiments/raev2/stage3/spacenet6
+  save_folder: igxl_s2git1m_ep100_mmdit_encdec_ep80/inference/full5048
+  seed: 42
+  precision: bf16
+  prefer_ema: true
+  clean_output: false

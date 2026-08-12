@@ -1,0 +1,51 @@
+_base_:
+  - ../_base_/runtime/default_dataloader.yaml
+
+real_set:
+  type: EvalSEN12SingleDataset
+  name: sen1_2_scene_split_seed42_test56479_opt_v1
+  image_dir: dataset/SEN1_2/test/opt
+  manifest_path: dataset/SEN1_2/manifests/test_opt.txt
+  preprocess:
+    - {type: ToTensor, keys: [pred]}
+  batch_size: 64
+  num_workers: 4
+  auto_resume: true
+
+eval_dataset:
+  type: EvalSEN12PairedDataset
+  pred_dir: null
+  gt_dir: dataset/SEN1_2/test/opt
+  manifest_path: dataset/SEN1_2/manifests/test_opt.txt
+  preprocess:
+    - {type: ToTensor, keys: [pred, gt]}
+
+metrics:
+  - type: PSNR
+    data_range: 1.0
+  - type: GlobalPSNR
+    data_range: 1.0
+  - type: SSIM
+    data_range: 1.0
+  - type: FID
+    feature: 2048
+    normalize: true
+    feature_extractor_weights_path: weights/evaluation/inception/weights-inception-2015-12-05-6726825d.pth
+  - type: CMMD
+    model_path: weights/evaluation/clip-vit-large-patch14-336
+    sigma: 10.0
+    scale: 1000.0
+  - type: LPIPS
+    net_type: alex
+    normalize: true
+
+eval:
+  enabled: false
+  epoch_interval: 10
+  num_samples: 256
+  gen_batch_size: 8
+  split: test
+  save_dir: sample
+  preview_dir: sample_preview
+  preview_max_images: 16
+  fail_on_error: true

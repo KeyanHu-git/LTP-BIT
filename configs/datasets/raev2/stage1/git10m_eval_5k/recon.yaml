@@ -1,0 +1,10 @@
+data:
+  name: git10m_eval_5k
+  default_path: dataset/Git-10M/eval_5k/images
+
+dataset:
+  type: Dataset_FixedLabelCC
+  dataroot: dataset/Git-10M/eval_5k/images
+  pipeline_dir: raev2/stage1/git10m_eval_5k
+  is_train: false
+  fixed_label: 0

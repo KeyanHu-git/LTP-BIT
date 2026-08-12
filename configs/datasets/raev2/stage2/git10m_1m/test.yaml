@@ -1,0 +1,13 @@
+dataset:
+  type: Dataset_MetadataLabelCC
+  condition_type: label
+  dataroot: dataset/Git-10M_resolution_256_1M
+  metadata_path: dataset/Git-10M_resolution_256_1M/metadata.jsonl
+  pipeline_dir: raev2/stage2/git10m_1m
+  is_train: false
+  label_key: label
+  filter_split: false
+
+test_pipeline:
+  - {type: CenterCropArr, keys: [img], size: 256}
+  - {type: ToTensor, keys: [img]}

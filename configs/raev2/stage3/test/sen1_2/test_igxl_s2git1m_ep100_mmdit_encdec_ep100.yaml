@@ -1,0 +1,21 @@
+_base_:
+  - ../../train/sen1_2/igxl_s2git1m_ep100_mmdit_encdec_ep100.yaml
+  - ../../../../datasets/raev2/stage3/sen1_2/test.yaml
+
+dataset:
+  fixed_label: 9
+
+eval:
+  num_samples: 56479
+
+inference:
+  ckpt: weights/stage3/sen1_2/igxl_ltp_bit_ep100.pt
+  num_samples: 56479
+  per_proc_batch_size: 4
+  gen_batch_size: 16
+  sample_dir: experiments/raev2/stage3/sen1_2
+  save_folder: igxl_s2git1m_ep100_mmdit_encdec_ep100/inference/full56479
+  seed: 42
+  precision: bf16
+  prefer_ema: true
+  clean_output: false

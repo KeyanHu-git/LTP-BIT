@@ -1,0 +1,18 @@
+data:
+  name: ChesapeakeNAIP
+  default_path: dataset/ChesapeakeNAIP_256_clean
+
+dataset:
+  type: Dataset_RAEPairedI2I
+  dataroot: dataset/ChesapeakeNAIP_256_clean
+  pipeline_dir: raev2/stage3/chesapeake_naip
+  split: train
+  source_dir: nir
+  target_dir: rgb
+  is_train: true
+  fixed_label: 0
+
+train_pipeline:
+  - {type: CenterCrop, keys: [img, img_ref], size: 256}
+  - {type: RandomFlip, keys: [img, img_ref], prob: 0.5, direction: horizontal}
+  - {type: ToTensor, keys: [img, img_ref]}

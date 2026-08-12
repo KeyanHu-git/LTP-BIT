@@ -1,0 +1,77 @@
+# Stage 1 multi-suite train-time eval.
+# Two parallel suites run side-by-side at each eval_interval:
+#   - git10m_5k       : Git-10M val-5k (remote-sensing domain)
+#   - imagenet_val_5k : ImageNet val-5k (natural-image domain)
+# Each suite emits PSNR / SSIM / FID / CMMD.
+#
+# Consumed by train_stage1.py via cfg.eval.suites.
+# real_set.{batch_size,num_workers} only feed the FID/CMMD real-feature cache
+# pre-warm; per-epoch fake-side dataloader uses suite.dataloader.
+_base_:
+  - ../../_base_/runtime/default_dataloader.yaml
+
+eval:
+  enabled: true
+  eval_interval: 0
+  num_samples: 5000
+  gen_batch_size: 16
+  save_dir: eval_recon
+  preview_dir: eval_recon_preview
+  preview_max_images: 16
+  suites:
+    - name: git10m_5k
+      real_set:
+        name: git10m_eval_5k
+        image_dir: dataset/Git-10M/eval_5k/images
+        preprocess:
+          - {type: ToTensor, keys: [pred]}
+        batch_size: 64
+        num_workers: 2
+        auto_resume: true
+      eval_dataset:
+        type: EvalPairedDataset
+        pred_dir: null
+        gt_dir: dataset/Git-10M/eval_5k/images
+        preprocess:
+          - {type: ToTensor, keys: [pred, gt]}
+      eval_input_dataset:
+        type: Dataset_FixedLabelCC
+        dataroot: dataset/Git-10M/eval_5k/images
+        pipeline_dir: raev2/stage1/git10m_eval_5k
+        is_train: false
+        fixed_label: 0
+      dataloader: {batch_size: 64, num_workers: 2}
+      metrics:
+        - {type: PSNR, data_range: 1.0}
+        - {type: GlobalPSNR, data_range: 1.0}
+        - {type: SSIM, data_range: 1.0}
+        - {type: FID, feature: 2048, normalize: true}
+        - {type: CMMD, model_path: weights/evaluation/clip-vit-large-patch14-336, sigma: 10.0, scale: 1000.0}
+    - name: imagenet_val_5k
+      real_set:
+        name: imagenet_val_5k
+        image_dir: dataset/ImageNet_val_5k/images
+        preprocess:
+          - {type: ToTensor, keys: [pred]}
+        batch_size: 64
+        num_workers: 2
+        auto_resume: true
+      eval_dataset:
+        type: EvalPairedDataset
+        pred_dir: null
+        gt_dir: dataset/ImageNet_val_5k/images
+        preprocess:
+          - {type: ToTensor, keys: [pred, gt]}
+      eval_input_dataset:
+        type: Dataset_FixedLabelCC
+        dataroot: dataset/ImageNet_val_5k/images
+        pipeline_dir: raev2/stage1/imagenet_val_5k
+        is_train: false
+        fixed_label: 0
+      dataloader: {batch_size: 64, num_workers: 2}
+      metrics:
+        - {type: PSNR, data_range: 1.0}
+        - {type: GlobalPSNR, data_range: 1.0}
+        - {type: SSIM, data_range: 1.0}
+        - {type: FID, feature: 2048, normalize: true}
+        - {type: CMMD, model_path: weights/evaluation/clip-vit-large-patch14-336, sigma: 10.0, scale: 1000.0}

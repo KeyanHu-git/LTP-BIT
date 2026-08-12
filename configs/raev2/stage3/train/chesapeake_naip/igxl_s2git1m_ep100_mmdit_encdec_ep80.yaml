@@ -1,0 +1,11 @@
+_base_:
+  - ../_base_/igxl_s2git1m_ep100_mmdit_encdec.yaml
+  - ../../../../datasets/raev2/stage3/chesapeake_naip/train.yaml
+  - ../../../../eval/train/stage3_chesapeake_naip.yaml
+
+dataset:
+  fixed_label: 9
+
+inference:
+  sample_dir: experiments/raev2/stage3/chesapeake_naip
+  save_folder: igxl_s2git1m_ep100_mmdit_encdec_ep80

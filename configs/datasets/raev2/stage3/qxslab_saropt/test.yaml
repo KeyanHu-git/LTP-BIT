@@ -1,0 +1,17 @@
+data:
+  name: QXSLAB_SAROPT
+  default_path: dataset/QXSLAB_SAROPT
+
+dataset:
+  type: Dataset_RAEPairedI2I
+  dataroot: dataset/QXSLAB_SAROPT
+  pipeline_dir: raev2/stage3/qxslab_saropt
+  split: test
+  source_dir: sar
+  target_dir: opt
+  is_train: false
+  fixed_label: 0
+
+test_pipeline:
+  - {type: CenterCropArr, keys: [img, img_ref], size: 256}
+  - {type: ToTensor, keys: [img, img_ref]}

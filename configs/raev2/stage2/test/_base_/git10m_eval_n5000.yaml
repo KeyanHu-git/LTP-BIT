@@ -1,0 +1,49 @@
+stage_1:
+  params:
+    pretrained_decoder_path: weights/stage1/ltp_bit_codec_ep19/decoder_ema.pt
+
+sampler:
+  num_steps: 100
+
+inference:
+  num_samples: 5000
+  per_proc_batch_size: 8
+  gen_batch_size: 32
+  label_source: metadata
+  label_metadata_path: dataset/Git-10M/eval_5k/metadata.jsonl
+  label_key: label
+  seed: 42
+  precision: bf16
+  clean_output: true
+  sample_dir: experiments/raev2/stage2/igxl_git1m_ep100
+  save_folder: inference/eval_5k
+
+dataloader:
+  batch_size: 32
+  num_workers: 4
+  shuffle: false
+
+real_set:
+  name: git10m_eval_5k
+  image_dir: dataset/Git-10M/eval_5k/images
+  preprocess:
+    - {type: ToTensor, keys: [pred]}
+  batch_size: 64
+  num_workers: 8
+  auto_resume: true
+
+eval_dataset:
+  type: EvalSingleDataset
+  pred_dir: null
+  preprocess:
+    - {type: ToTensor, keys: [pred]}
+
+metrics:
+  - type: FID
+    feature: 2048
+    normalize: true
+    feature_extractor_weights_path: weights/evaluation/inception/weights-inception-2015-12-05-6726825d.pth
+  - type: CMMD
+    model_path: weights/evaluation/clip-vit-large-patch14-336
+    sigma: 10.0
+    scale: 1000.0

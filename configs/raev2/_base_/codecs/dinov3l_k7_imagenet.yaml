@@ -1,0 +1,13 @@
+stage_1:
+  target: raev2.stage1.RAE
+  params:
+    encoder_name: dinov3mls-vit-l16[layers=11.13.15.17.19.21.23]
+    resolution: 256
+    decoder_config_path: configs/raev2/decoder/ViTXL
+    pretrained_decoder_path: weights/stage1/imagenet/dinov3l_k7/decoder.pt
+    normalization_stat_path: weights/stage1/imagenet/dinov3l_k7/stats.pt
+    noise_tau: 0.0
+
+misc:
+  latent_size: [1024, 16, 16]
+  time_dist_shift_dim: 262144

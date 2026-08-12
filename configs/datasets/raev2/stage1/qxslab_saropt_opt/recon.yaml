@@ -1,0 +1,10 @@
+data:
+  name: qxslab_saropt_opt
+  default_path: dataset/QXSLAB_SAROPT/test/opt
+
+dataset:
+  type: Dataset_FixedLabelCC
+  dataroot: dataset/QXSLAB_SAROPT/test/opt
+  pipeline_dir: raev2/stage1/qxslab_saropt_opt
+  is_train: false
+  fixed_label: 0

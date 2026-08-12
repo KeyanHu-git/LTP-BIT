@@ -1,0 +1,60 @@
+# IG-XL prior pretraining on the 1M Git-10M subset, phase 1 of the 100-epoch recipe.
+_base_:
+  - ../../base.yaml
+  - ../../../_base_/models/stage2_ditdh_ig_xl_256.yaml
+  - ../../../_base_/codecs/dinov3l_k7_imagenet.yaml
+  - ../../../../eval/train/stage2_git10m.yaml
+  - ../../../../datasets/raev2/stage2/git10m_1m/train.yaml
+
+stage_2:
+  ckpt: null
+
+training:
+  epochs: 15
+  global_batch_size: 1024
+  grad_accum_steps: 16
+  num_workers: 8
+  checkpoint_interval: 5
+  checkpoint_policy:
+    interval_epochs: 5
+    keep_last_n: 0
+    save_last_every_epoch: true
+  scheduler:
+    type: linear
+    warmup_epochs: 5
+    decay_end_epoch: 10
+    base_lr: 2.0e-4
+    final_lr: 2.0e-5
+    warmup_from_zero: false
+
+misc:
+  num_classes: 9
+  null_label: 9
+
+eval_dataset:
+  type: EvalSingleDataset
+  pred_dir: null
+  preprocess: [{type: ToTensor, keys: [pred]}]
+
+eval_input_dataset:
+  type: Dataset_MetadataLabelCC
+  condition_type: label
+  dataroot: dataset/Git-10M_resolution_256_1M
+  metadata_path: dataset/Git-10M_resolution_256_1M/metadata.jsonl
+  pipeline_dir: raev2/stage2/git10m_1m
+  is_train: false
+  label_key: label
+  filter_split: false
+
+eval:
+  enabled: true
+  epoch_interval: 5
+  eval_interval: 5000
+  eval_model: true
+  num_samples: 256
+  gen_batch_size: 2
+  seed: 42
+  save_dir: eval
+  preview_dir: eval_preview
+  preview_max_images: 16
+  keep_pngs: true
