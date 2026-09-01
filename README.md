@@ -146,11 +146,11 @@ The paired-data loader matches source and target images by relative path. If eit
 
 Stage 2 uses RS-1M for target-prior pretraining. We selected one million 256 x 256 RGB images from Git-10M, screened low-quality samples, removed duplicates, and kept the final set diverse. The supplement describes the selection procedure.
 
-Checkpoint files are not stored in Git. Download links will be added after the release package has been checked and uploaded; the expected folder names and paths are listed in the [reproduction guide](docs/REPRODUCING.md).
+Checkpoint files are not stored in Git. Download links will be added after the checkpoint package has been checked and uploaded; the expected folder names and paths are listed in the [reproduction guide](docs/REPRODUCING.md).
 
-## <img src="assets/readme-icons/status.svg" alt="" width="18"> Release status
+## <img src="assets/readme-icons/status.svg" alt="" width="18"> Project status
 
-The code is public, but pretrained weights are not included in the current release. We will update this list as the repository changes.
+The code is public. Pretrained weights are not available yet. We will update this list as the repository changes.
 
 - [x] Training, inference, and evaluation code
 - [x] Reproduction configs for all three benchmarks
