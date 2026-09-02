@@ -1,4 +1,6 @@
-<h1 align="center">Learning the Target Priors Before Image Translation (LTP-BIT)</h1>
+<p align="center">
+  <img src="assets/ltp-bit-title.svg" alt="Learning the Target Priors Before Image Translation (LTP-BIT)" width="100%">
+</p>
 
 <p align="center">
   <strong>A Decoupled Training Paradigm for Cross-Modal Image Translation in Remote Sensing</strong>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 184" role="img" aria-labelledby="title description">
+  <title id="title">Learning the Target Priors Before Image Translation</title>
+  <desc id="description">LTP-BIT, with the initials L, T, P in green and B, I, T in blue.</desc>
+  <style>
+    .title-copy {
+      fill: #161b22;
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -2.3px;
+    }
+    .prior { fill: #4ea72e; }
+    .translation { fill: #0f9ed5; }
+    @media (prefers-color-scheme: dark) {
+      .title-copy { fill: #f0f6fc; }
+      .prior { fill: #66bd47; }
+      .translation { fill: #35b7e8; }
+    }
+  </style>
+  <text class="title-copy" x="600" y="76" text-anchor="middle">
+    <tspan class="prior">L</tspan><tspan>earning the </tspan><tspan class="prior">T</tspan><tspan>arget </tspan><tspan class="prior">P</tspan><tspan>riors</tspan>
+  </text>
+  <text class="title-copy" x="600" y="154" text-anchor="middle">
+    <tspan class="translation">B</tspan><tspan>efore </tspan><tspan class="translation">I</tspan><tspan>mage </tspan><tspan class="translation">T</tspan><tspan>ranslation</tspan>
+  </text>
+</svg>
