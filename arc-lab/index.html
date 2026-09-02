@@ -1,11 +1,20 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene1-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene2-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene3-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene4-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene1-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene2-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene3-ours.png"/><link rel="stylesheet" href="/LTP-BIT/assets/index-DAVdvVGD.css" data-rsc-css-href="/LTP-BIT/assets/index-DAVdvVGD.css" data-precedence="vite-rsc/importer-resources"/><link rel="modulepreload" href="/LTP-BIT/assets/layout-segment-context-Dsf3F-3p.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/rolldown-runtime-S-ySWqyJ.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/index-BgBG8-lO.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/framework-DjPHiq1u.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/page-BQOv2WYU.js" crossorigin=""/><title>LTP-BIT — Learning the Target Priors Before Image Translation</title><meta name="description" content="Official project page for Learning the Target Priors Before Image Translation (LTP-BIT), including the paper, code, models, and results."/><meta property="og:title" content="LTP-BIT — Learning the Target Priors Before Image Translation"/><meta property="og:description" content="Learn the target world before translating into it."/><meta property="og:type" content="website"/><meta property="og:image" content="/LTP-BIT/og-dark.png"/><meta property="og:image:width" content="1731"/><meta property="og:image:height" content="909"/><meta property="og:image:alt" content="LTP-BIT project preview"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="LTP-BIT — Learning the Target Priors Before Image Translation"/><meta name="twitter:description" content="Learn the target world before translating into it."/><meta name="twitter:image" content="/LTP-BIT/og-dark.png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon-16.png" sizes="16x16" type="image/png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon-32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon.png" sizes="512x512" type="image/png"/><link rel="canonical" href="https://keyanhu-git.github.io/LTP-BIT/"/><meta name="google-site-verification" content="Q0G4Cc18DqUXBNstGwNXm5p5h9InsCd3XIoUghKsAvE"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Learning the Target Priors Before Image Translation: A Decoupled Training Paradigm for Cross-Modal Image Translation in Remote Sensing","alternateName":"LTP-BIT","url":"https://keyanhu-git.github.io/LTP-BIT/","sameAs":"https://arxiv.org/abs/2608.28517"}</script><script>self.__VINEXT_RSC_PARAMS__={}</script><script>self.__VINEXT_RSC_NAV__={"pathname":"/arc-lab/","searchParams":[]}</script><link rel="modulepreload" href="/LTP-BIT/assets/index-BgBG8-lO.js" />
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene1-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene2-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene3-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/qxs/scene4-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene1-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene2-ours.png"/><link rel="preload" as="image" href="/LTP-BIT/media/spacenet/scene3-ours.png"/><link rel="stylesheet" href="/LTP-BIT/assets/index-BCKjlrJe.css" data-rsc-css-href="/LTP-BIT/assets/index-BCKjlrJe.css" data-precedence="vite-rsc/importer-resources"/><link rel="modulepreload" href="/LTP-BIT/assets/layout-segment-context-Bis0-rC5.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/rolldown-runtime-S-ySWqyJ.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/index-oxAxO7Ac.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/framework-DjPHiq1u.js" crossorigin=""/><link rel="modulepreload" href="/LTP-BIT/assets/page-BQOv2WYU.js" crossorigin=""/><title>LTP-BIT — Learning the Target Priors Before Image Translation</title><meta name="description" content="Official project page for Learning the Target Priors Before Image Translation (LTP-BIT), including the paper, code, models, and results."/><meta property="og:title" content="LTP-BIT — Learning the Target Priors Before Image Translation"/><meta property="og:description" content="Learn the target world before translating into it."/><meta property="og:type" content="website"/><meta property="og:image" content="/LTP-BIT/og-dark.png"/><meta property="og:image:width" content="1731"/><meta property="og:image:height" content="909"/><meta property="og:image:alt" content="LTP-BIT project preview"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="LTP-BIT — Learning the Target Priors Before Image Translation"/><meta name="twitter:description" content="Learn the target world before translating into it."/><meta name="twitter:image" content="/LTP-BIT/og-dark.png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon-16.png" sizes="16x16" type="image/png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon-32.png" sizes="32x32" type="image/png"/><link rel="icon" href="/LTP-BIT/prior-gate-static-favicon.png" sizes="512x512" type="image/png"/><link rel="canonical" href="https://keyanhu-git.github.io/LTP-BIT/"/><meta name="google-site-verification" content="Q0G4Cc18DqUXBNstGwNXm5p5h9InsCd3XIoUghKsAvE"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","name":"Learning the Target Priors Before Image Translation: A Decoupled Training Paradigm for Cross-Modal Image Translation in Remote Sensing","alternateName":"LTP-BIT","url":"https://keyanhu-git.github.io/LTP-BIT/","sameAs":"https://arxiv.org/abs/2608.28517"}</script><script>self.__VINEXT_RSC_PARAMS__={}</script><script>self.__VINEXT_RSC_NAV__={"pathname":"/arc-lab/","searchParams":[]}</script><link rel="modulepreload" href="/LTP-BIT/assets/index-oxAxO7Ac.js" />
+<link rel="preload" href="/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2" as="font" type="font/woff2" crossorigin />
 <style data-vinext-fonts>/* latin-ext */
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -14,7 +23,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -23,7 +32,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -32,7 +41,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -41,7 +50,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -50,7 +59,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* latin-ext */
@@ -59,7 +68,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-f6298972.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -68,13 +77,13 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/dm-sans-fe76be7f7f35/dm-sans-151a53ae.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.__font_dm_sans_01dc7gx { font-family: 'DM Sans', sans-serif; }
+.__font_dm_sans_0ei07vd { font-family: 'DM Sans', sans-serif; }
 
-.__variable_dm_sans_01dc7gx { --font-ui: 'DM Sans', sans-serif; }
+.__variable_dm_sans_0ei07vd { --font-ui: 'DM Sans', sans-serif; }
 
 /* cyrillic-ext */
 @font-face {
@@ -82,7 +91,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
@@ -91,7 +100,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek-ext */
@@ -100,7 +109,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 /* greek */
@@ -109,7 +118,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 /* vietnamese */
@@ -118,7 +127,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
@@ -127,7 +136,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -136,7 +145,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
@@ -145,7 +154,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
@@ -154,7 +163,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek-ext */
@@ -163,7 +172,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 /* greek */
@@ -172,7 +181,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 /* vietnamese */
@@ -181,7 +190,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
@@ -190,7 +199,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -199,7 +208,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* cyrillic-ext */
@@ -208,7 +217,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e73608c8.woff2) format('woff2');
   unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 /* cyrillic */
@@ -217,7 +226,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-b22eabe5.woff2) format('woff2');
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 /* greek-ext */
@@ -226,7 +235,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-bca75ac6.woff2) format('woff2');
   unicode-range: U+1F00-1FFF;
 }
 /* greek */
@@ -235,7 +244,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-0e55af96.woff2) format('woff2');
   unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
 }
 /* vietnamese */
@@ -244,7 +253,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-293ebd35.woff2) format('woff2');
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
@@ -253,7 +262,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-ef49a57f.woff2) format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
@@ -262,12 +271,12 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(C:/Users/Keyan Hu/AppData/Local/Temp/ltp-bit-source-v19-3d55fe5fe78045e58d374178e93b35ff/.vinext/fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
+  src: url(/assets/_vinext_fonts/source-sans-3-4d9edd0b0d72/source-sans-3-e0c1680e.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.__font_source_sans_3_0kcncz9 { font-family: 'Source Sans 3', sans-serif; }
+.__font_source_sans_3_1paogvf { font-family: 'Source Sans 3', sans-serif; }
 
-.__variable_source_sans_3_0kcncz9 { --font-display: 'Source Sans 3', sans-serif; }
+.__variable_source_sans_3_1paogvf { --font-display: 'Source Sans 3', sans-serif; }
 </style>
-</head><body class="__variable_dm_sans_01dc7gx __variable_source_sans_3_0kcncz9"><main class="arc-lab-page"><header class="arc-lab-header"><a href="/LTP-BIT/" class="arc-lab-back">LTP-BIT <span>／</span> motion lab</a><div class="arc-lab-status"><i></i> ARC CAROUSEL · PROTOTYPE 01</div></header><section class="arc-lab-intro"><span>SCENE NAVIGATION STUDY</span><h1>Images that orbit,<br/>rather than switch.</h1><p>Every scene remains on one continuous arc. Position, depth, scale and rotation move together, so the gallery feels spatial instead of replaced frame by frame.</p></section><section class="arc-lab-stage" aria-label="Arc carousel interaction prototype"><div class="arc-lab-halo" aria-hidden="true"></div><div class="arc-lab-orbit" aria-hidden="true"><i></i><i></i><i></i></div><button class="arc-lab-arrow arc-lab-arrow-left" type="button" aria-label="Previous scene">‹</button><button class="arc-lab-arrow arc-lab-arrow-right" type="button" aria-label="Next scene">›</button><div class="arc-lab-cards"><button type="button" class="arc-lab-card is-active" style="--arc-x:0px;--arc-y:0px;--arc-rotate:0deg;--arc-scale:1;--arc-opacity:1;--arc-blur:0px;--arc-z:20;--arc-duration:760ms;--scene-tone:#2f9bd1" aria-current="true" aria-label="Show Waterfront edge"><img src="/LTP-BIT/media/qxs/scene1-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">01</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Waterfront edge</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:184px;--arc-y:46px;--arc-rotate:6.5deg;--arc-scale:0.865;--arc-opacity:0.71;--arc-blur:0px;--arc-z:16;--arc-duration:760ms;--scene-tone:#4477e7" aria-label="Show Transport corridor"><img src="/LTP-BIT/media/qxs/scene2-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">02</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Transport corridor</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:368px;--arc-y:134.69588402699753px;--arc-rotate:13deg;--arc-scale:0.73;--arc-opacity:0.42000000000000004;--arc-blur:1.2px;--arc-z:12;--arc-duration:760ms;--scene-tone:#6f63df" aria-label="Show Industrial tanks"><img src="/LTP-BIT/media/qxs/scene3-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">03</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Industrial tanks</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:552px;--arc-y:252.51999758218167px;--arc-rotate:19.5deg;--arc-scale:0.595;--arc-opacity:0;--arc-blur:2.4px;--arc-z:8;--arc-duration:760ms;--scene-tone:#a35dcc" aria-label="Show Dense urban"><img src="/LTP-BIT/media/qxs/scene4-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">04</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Dense urban</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-552px;--arc-y:252.51999758218167px;--arc-rotate:-19.5deg;--arc-scale:0.595;--arc-opacity:0;--arc-blur:2.4px;--arc-z:8;--arc-duration:760ms;--scene-tone:#c35f9e" aria-label="Show Road network"><img src="/LTP-BIT/media/spacenet/scene1-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">05</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Road network</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-368px;--arc-y:134.69588402699753px;--arc-rotate:-13deg;--arc-scale:0.73;--arc-opacity:0.42000000000000004;--arc-blur:1.2px;--arc-z:12;--arc-duration:760ms;--scene-tone:#d86f68" aria-label="Show Port &amp; vessel"><img src="/LTP-BIT/media/spacenet/scene2-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">06</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Port &amp; vessel</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-184px;--arc-y:46px;--arc-rotate:-6.5deg;--arc-scale:0.865;--arc-opacity:0.71;--arc-blur:0px;--arc-z:16;--arc-duration:760ms;--scene-tone:#d8994b" aria-label="Show Industrial coast"><img src="/LTP-BIT/media/spacenet/scene3-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">07</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Industrial coast</strong></span></button></div><div class="arc-lab-caption" aria-live="polite"><span>01<!-- --> / <!-- -->07</span><strong>Waterfront edge</strong><small>Single-polarization SAR → RGB</small></div></section><nav class="arc-lab-pagination" aria-label="Choose scene"><button type="button" class="is-active" aria-label="Show Waterfront edge"><span></span></button><button type="button" class="" aria-label="Show Transport corridor"><span></span></button><button type="button" class="" aria-label="Show Industrial tanks"><span></span></button><button type="button" class="" aria-label="Show Dense urban"><span></span></button><button type="button" class="" aria-label="Show Road network"><span></span></button><button type="button" class="" aria-label="Show Port &amp; vessel"><span></span></button><button type="button" class="" aria-label="Show Industrial coast"><span></span></button></nav><section class="arc-lab-console"><div><span>Arc depth</span><input aria-label="Arc depth" type="range" min="28" max="66" value="46"/><output>46</output></div><div><span>Motion</span><input aria-label="Motion duration" type="range" min="520" max="1100" step="20" value="760"/><output>760<!-- -->ms</output></div><button type="button" class="is-on"><i></i>Auto rotation on</button></section></main><script id="_R_">import("/LTP-BIT/assets/index-BgBG8-lO.js")</script></body></html><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("2:I[\"394c52137525\",[],\"Children\",1]\n3:I[\"4054c8c17469\",[],\"LayoutSegmentProvider\",1]\n4:I[\"394c52137525\",[],\"Slot\",1]\n5:I[\"b525994e18d9\",[],\"RedirectBoundary\",1]\n:HL[\"/LTP-BIT/assets/index-DAVdvVGD.css\",\"style\"]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("0:{\"__route\":\"route:/arc-lab/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"page:/arc-lab/\":\"$L1\",\"layout:/\":[[[[\"$\",\"link\",\"css:/LTP-BIT/assets/index-DAVdvVGD.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"/LTP-BIT/assets/index-DAVdvVGD.css\",\"data-rsc-css-href\":\"/LTP-BIT/assets/index-DAVdvVGD.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"en\",\"data-theme\":\"light\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"ScholarlyArticle\\\",\\\"name\\\":\\\"Learning the Target Priors Before Image Translation: A Decoupled Training Paradigm for Cross-Modal Image Translation in Remote Sensing\\\",\\\"alternateName\\\":\\\"LTP-BIT\\\",\\\"url\\\":\\\"https://keyanhu-git.github.io/LTP-BIT/\\\",\\\"sameAs\\\":\\\"https://arxiv.org/abs/2608.28517\\\"}\"}}]}],[\"$\",\"body\",null,{\"className\":\"__variable_dm_sans_01dc7gx __variable_source_sans_3_0kcncz9\",\"children\":[\"$\",\"$L2\",null,{}]}]]}]],null],\"route:/arc-lab/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Official project page for Learning the Target Priors Before Image Translation (LTP-BIT), including the paper, code, models, and results.\"}],[\"$\",\"meta\",\"2\",{\"property\":\"og:title\",\"content\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"3\",{\"property\":\"og:description\",\"content\":\"Learn the target world before translating into it.\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:image\",\"content\":\"/LTP-BIT/og-dark.png\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:image:width\",\"content\":\"1731\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:image:height\",\"content\":\"909\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:image:alt\",\"content\":\"LTP-BIT project preview\"}],[\"$\",\"meta\",\"9\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"10\",{\"name\":\"twitter:title\",\"content\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:description\",\"content\":\"Learn the target world before translating into it.\"}],[\"$\",\"meta\",\"12\",{\"name\":\"twitter:image\",\"content\":\"/LTP-BIT/og-dark.png\"}],[\"$\",\"link\",\"13\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon-16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"14\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon-32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"15\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon.png\",\"sizes\":\"512x512\",\"type\":\"image/png\"}],[\"$\",\"link\",\"16\",{\"rel\":\"canonical\",\"href\":\"https://keyanhu-git.github.io/LTP-BIT/\"}],[\"$\",\"meta\",\"17\",{\"name\":\"google-site-verification\",\"content\":\"Q0G4Cc18DqUXBNstGwNXm5p5h9InsCd3XIoUghKsAvE\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]],[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[\"arc-lab\"]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"page:/arc-lab/\"}]}]}]}]}]],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:1b2ynzownvd80\",\"deploymentVersion\":\"584407e2-92a0-4dcd-8268-222be0300449\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null}}\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("6:I[\"cb43dce8a673\",[],\"default\",1]\n1:[\"$\",\"$L6\",null,{\"params\":\"$@7\",\"searchParams\":\"$@8\"}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("7:{}\n8:{}\n")</script><script>self.__VINEXT_RSC_DONE__=true</script>
+</head><body class="__variable_dm_sans_0ei07vd __variable_source_sans_3_1paogvf"><main class="arc-lab-page"><header class="arc-lab-header"><a href="/LTP-BIT/" class="arc-lab-back">LTP-BIT <span>／</span> motion lab</a><div class="arc-lab-status"><i></i> ARC CAROUSEL · PROTOTYPE 01</div></header><section class="arc-lab-intro"><span>SCENE NAVIGATION STUDY</span><h1>Images that orbit,<br/>rather than switch.</h1><p>Every scene remains on one continuous arc. Position, depth, scale and rotation move together, so the gallery feels spatial instead of replaced frame by frame.</p></section><section class="arc-lab-stage" aria-label="Arc carousel interaction prototype"><div class="arc-lab-halo" aria-hidden="true"></div><div class="arc-lab-orbit" aria-hidden="true"><i></i><i></i><i></i></div><button class="arc-lab-arrow arc-lab-arrow-left" type="button" aria-label="Previous scene">‹</button><button class="arc-lab-arrow arc-lab-arrow-right" type="button" aria-label="Next scene">›</button><div class="arc-lab-cards"><button type="button" class="arc-lab-card is-active" style="--arc-x:0px;--arc-y:0px;--arc-rotate:0deg;--arc-scale:1;--arc-opacity:1;--arc-blur:0px;--arc-z:20;--arc-duration:760ms;--scene-tone:#2f9bd1" aria-current="true" aria-label="Show Waterfront edge"><img src="/LTP-BIT/media/qxs/scene1-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">01</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Waterfront edge</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:184px;--arc-y:46px;--arc-rotate:6.5deg;--arc-scale:0.865;--arc-opacity:0.71;--arc-blur:0px;--arc-z:16;--arc-duration:760ms;--scene-tone:#4477e7" aria-label="Show Transport corridor"><img src="/LTP-BIT/media/qxs/scene2-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">02</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Transport corridor</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:368px;--arc-y:134.69588402699753px;--arc-rotate:13deg;--arc-scale:0.73;--arc-opacity:0.42000000000000004;--arc-blur:1.2px;--arc-z:12;--arc-duration:760ms;--scene-tone:#6f63df" aria-label="Show Industrial tanks"><img src="/LTP-BIT/media/qxs/scene3-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">03</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Industrial tanks</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:552px;--arc-y:252.51999758218167px;--arc-rotate:19.5deg;--arc-scale:0.595;--arc-opacity:0;--arc-blur:2.4px;--arc-z:8;--arc-duration:760ms;--scene-tone:#a35dcc" aria-label="Show Dense urban"><img src="/LTP-BIT/media/qxs/scene4-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">04</span><span class="arc-lab-card-copy"><small>QXS-SAROPT</small><strong>Dense urban</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-552px;--arc-y:252.51999758218167px;--arc-rotate:-19.5deg;--arc-scale:0.595;--arc-opacity:0;--arc-blur:2.4px;--arc-z:8;--arc-duration:760ms;--scene-tone:#c35f9e" aria-label="Show Road network"><img src="/LTP-BIT/media/spacenet/scene1-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">05</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Road network</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-368px;--arc-y:134.69588402699753px;--arc-rotate:-13deg;--arc-scale:0.73;--arc-opacity:0.42000000000000004;--arc-blur:1.2px;--arc-z:12;--arc-duration:760ms;--scene-tone:#d86f68" aria-label="Show Port &amp; vessel"><img src="/LTP-BIT/media/spacenet/scene2-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">06</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Port &amp; vessel</strong></span></button><button type="button" class="arc-lab-card " style="--arc-x:-184px;--arc-y:46px;--arc-rotate:-6.5deg;--arc-scale:0.865;--arc-opacity:0.71;--arc-blur:0px;--arc-z:16;--arc-duration:760ms;--scene-tone:#d8994b" aria-label="Show Industrial coast"><img src="/LTP-BIT/media/spacenet/scene3-ours.png" alt=""/><span class="arc-lab-card-shade"></span><span class="arc-lab-card-index">07</span><span class="arc-lab-card-copy"><small>SpaceNet6</small><strong>Industrial coast</strong></span></button></div><div class="arc-lab-caption" aria-live="polite"><span>01<!-- --> / <!-- -->07</span><strong>Waterfront edge</strong><small>Single-polarization SAR → RGB</small></div></section><nav class="arc-lab-pagination" aria-label="Choose scene"><button type="button" class="is-active" aria-label="Show Waterfront edge"><span></span></button><button type="button" class="" aria-label="Show Transport corridor"><span></span></button><button type="button" class="" aria-label="Show Industrial tanks"><span></span></button><button type="button" class="" aria-label="Show Dense urban"><span></span></button><button type="button" class="" aria-label="Show Road network"><span></span></button><button type="button" class="" aria-label="Show Port &amp; vessel"><span></span></button><button type="button" class="" aria-label="Show Industrial coast"><span></span></button></nav><section class="arc-lab-console"><div><span>Arc depth</span><input aria-label="Arc depth" type="range" min="28" max="66" value="46"/><output>46</output></div><div><span>Motion</span><input aria-label="Motion duration" type="range" min="520" max="1100" step="20" value="760"/><output>760<!-- -->ms</output></div><button type="button" class="is-on"><i></i>Auto rotation on</button></section></main><script id="_R_">import("/LTP-BIT/assets/index-oxAxO7Ac.js")</script></body></html><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("2:I[\"8c0f216c4604\",[],\"Children\",1]\n3:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\n4:I[\"8c0f216c4604\",[],\"Slot\",1]\n5:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n:HL[\"/LTP-BIT/assets/index-BCKjlrJe.css\",\"style\"]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("0:{\"__route\":\"route:/arc-lab/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"page:/arc-lab/\":\"$L1\",\"layout:/\":[[[[\"$\",\"link\",\"css:/LTP-BIT/assets/index-BCKjlrJe.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"/LTP-BIT/assets/index-BCKjlrJe.css\",\"data-rsc-css-href\":\"/LTP-BIT/assets/index-BCKjlrJe.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"en\",\"data-theme\":\"light\",\"children\":[[\"$\",\"head\",null,{\"children\":[\"$\",\"script\",null,{\"type\":\"application/ld+json\",\"dangerouslySetInnerHTML\":{\"__html\":\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"ScholarlyArticle\\\",\\\"name\\\":\\\"Learning the Target Priors Before Image Translation: A Decoupled Training Paradigm for Cross-Modal Image Translation in Remote Sensing\\\",\\\"alternateName\\\":\\\"LTP-BIT\\\",\\\"url\\\":\\\"https://keyanhu-git.github.io/LTP-BIT/\\\",\\\"sameAs\\\":\\\"https://arxiv.org/abs/2608.28517\\\"}\"}}]}],[\"$\",\"body\",null,{\"className\":\"__variable_dm_sans_0ei07vd __variable_source_sans_3_1paogvf\",\"children\":[\"$\",\"$L2\",null,{}]}]]}]],null],\"route:/arc-lab/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Official project page for Learning the Target Priors Before Image Translation (LTP-BIT), including the paper, code, models, and results.\"}],[\"$\",\"meta\",\"2\",{\"property\":\"og:title\",\"content\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"3\",{\"property\":\"og:description\",\"content\":\"Learn the target world before translating into it.\"}],[\"$\",\"meta\",\"4\",{\"property\":\"og:type\",\"content\":\"website\"}],[\"$\",\"meta\",\"5\",{\"property\":\"og:image\",\"content\":\"/LTP-BIT/og-dark.png\"}],[\"$\",\"meta\",\"6\",{\"property\":\"og:image:width\",\"content\":\"1731\"}],[\"$\",\"meta\",\"7\",{\"property\":\"og:image:height\",\"content\":\"909\"}],[\"$\",\"meta\",\"8\",{\"property\":\"og:image:alt\",\"content\":\"LTP-BIT project preview\"}],[\"$\",\"meta\",\"9\",{\"name\":\"twitter:card\",\"content\":\"summary_large_image\"}],[\"$\",\"meta\",\"10\",{\"name\":\"twitter:title\",\"content\":\"LTP-BIT — Learning the Target Priors Before Image Translation\"}],[\"$\",\"meta\",\"11\",{\"name\":\"twitter:description\",\"content\":\"Learn the target world before translating into it.\"}],[\"$\",\"meta\",\"12\",{\"name\":\"twitter:image\",\"content\":\"/LTP-BIT/og-dark.png\"}],[\"$\",\"link\",\"13\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon-16.png\",\"sizes\":\"16x16\",\"type\":\"image/png\"}],[\"$\",\"link\",\"14\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon-32.png\",\"sizes\":\"32x32\",\"type\":\"image/png\"}],[\"$\",\"link\",\"15\",{\"rel\":\"icon\",\"href\":\"/LTP-BIT/prior-gate-static-favicon.png\",\"sizes\":\"512x512\",\"type\":\"image/png\"}],[\"$\",\"link\",\"16\",{\"rel\":\"canonical\",\"href\":\"https://keyanhu-git.github.io/LTP-BIT/\"}],[\"$\",\"meta\",\"17\",{\"name\":\"google-site-verification\",\"content\":\"Q0G4Cc18DqUXBNstGwNXm5p5h9InsCd3XIoUghKsAvE\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]],[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[\"arc-lab\"]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"page:/arc-lab/\"}]}]}]}]}]],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:1b2ynzownvd80\",\"deploymentVersion\":\"5669aab8-30e2-44a7-8dd4-421553ea7b76\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null}}\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("6:I[\"cb43dce8a673\",[],\"default\",1]\n1:[\"$\",\"$L6\",null,{\"params\":\"$@7\",\"searchParams\":\"$@8\"}]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("7:{}\n8:{}\n")</script><script>self.__VINEXT_RSC_DONE__=true</script>
